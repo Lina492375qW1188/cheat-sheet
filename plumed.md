@@ -1,0 +1,10 @@
+Cut `.xtc`
+```
+gmx_mpi trjconv -f md.xtc -b 0 -e 100000 -o md_short.xtc
+gmx_mpi trjconv -f md.xtc -b 0 -e 20000 -o md_20ns.xtc
+```
+
+PLUMED on bridges2
+```
+/jet/packages/spack/opt/spack/linux-centos8-zen2/gcc-10.2.0/plumed-2.6.1-k62ifixvl6p64x42c5wd3rjcvhhozwbf/bin/plumed driver --mf_xtc md_40ns.xtc --plumed plumed_water.dat
+```
