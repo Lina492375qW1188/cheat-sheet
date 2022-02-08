@@ -27,6 +27,7 @@ conda install mamba -c conda-forge
 mamba install python=3.7 numpy matplotlib jupyterlab=3.1.7 notebook -c conda-forge
 mamba install scipy -c conda
 mamba install scikit-learn -c intel
+mamba install pyemma -c conda-forge
 conda deactivate
 ```
 
