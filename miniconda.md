@@ -64,6 +64,8 @@ mamba install hoomd -c conda-forge
 mamba install freud -c conda-forge
 mamba install fresnel -c conda-forge
 mamba install gsd -c conda-forge
+mamba install scikit-learn -c intel
+mamba install scipy -c conda
 conda deactivate
 ```
 
