@@ -41,7 +41,7 @@ mamba install scipy -c conda
 mamba install scikit-learn -c intel
 mamba install -c pytorch pytorch
 mamba install pyemma -c conda-forge
- mamba install qutip -c conda-forge
+mamba install qutip -c conda-forge
 conda deactivate
 ```
 
@@ -66,6 +66,7 @@ mamba install fresnel -c conda-forge
 mamba install gsd -c conda-forge
 mamba install scikit-learn -c intel
 mamba install scipy -c conda
+mamba install -c pytorch pytorch
 conda deactivate
 ```
 
