@@ -67,6 +67,9 @@ mamba install gsd -c conda-forge
 mamba install scikit-learn -c intel
 mamba install scipy -c conda
 mamba install -c pytorch pytorch
+
+mamba install -n base -c conda-forge widgetsnbextension
+mamba install -n py36 -c conda-forge ipywidgets
 conda deactivate
 ```
 
