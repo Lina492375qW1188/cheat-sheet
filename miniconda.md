@@ -85,7 +85,7 @@ conda deactivate
 ```
 
 
-Project-patchy-m1
+Project-patchy-mi
 ```
 conda create -n patchy
 conda activate patchy
