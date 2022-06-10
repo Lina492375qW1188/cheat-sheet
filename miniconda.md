@@ -75,7 +75,7 @@ mamba install -c pytorch pytorch
 mamba install pyg -c pyg
 
 mamba install -n base -c conda-forge widgetsnbextension
-mamba install -n py36 -c conda-forge ipywidgets
+mamba install -n patchy -c conda-forge ipywidgets
 conda deactivate
 ```
 
@@ -116,7 +116,7 @@ mamba install pyg -c pyg
 mamba install pandas
 
 mamba install -n base -c conda-forge widgetsnbextension
-// mamba install -n py36 -c conda-forge ipywidgets
+mamba install -n patchy-mi -c conda-forge ipywidgets
 conda deactivate
 ```
 
