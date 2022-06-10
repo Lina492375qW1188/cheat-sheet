@@ -1,4 +1,9 @@
-Building miniconda environment Iva mamba
+Building miniconda environment via mamba
+
+If using zsh and it hasn't been set up to read .bashrc, add miniconda directory to zsh shell PATH environment via
+```
+export PATH="/Users/suntingt/miniconda/bin:$PATH"
+```
 
 `-c`: channel, different packages are uploaded to different channels in conda. For example, conda-forge and conda are two different channels.
 `conda list`: List conda package
