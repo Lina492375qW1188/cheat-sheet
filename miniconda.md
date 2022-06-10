@@ -85,6 +85,38 @@ conda deactivate
 ```
 
 
+Project-patchy-m1
+```
+conda create -n patchy
+conda activate patchy
+conda install mamba -c conda-forge
+mamba install python numpy matplotlib jupyterlab notebook -c conda-forge
+
+mamba install pybind11 -c conda-forge
+mamba install eigen -c conda-forge
+mamba install cmake -c conda-forge
+mamba install qhull -c conda-forge
+mamba install pyside2 -c conda-forge
+mamba install pillow -c conda-forge
+mamba install pytest -c conda-forge
+
+mamba install hoomd -c conda-forge
+mamba install freud -c conda-forge
+mamba install fresnel -c conda-forge
+mamba install -c conda-forge signac signac-flow
+mamba install gsd -c conda-forge
+mamba install scikit-learn -c intel
+mamba install scipy -c conda
+mamba install -c pytorch pytorch
+mamba install pyg -c pyg
+
+mamba install -n base -c conda-forge widgetsnbextension
+// mamba install -n py36 -c conda-forge ipywidgets
+mamba install pandas
+conda deactivate
+```
+
+
 Remove environment: 
 ```
 conda env remove -n [env_name]
