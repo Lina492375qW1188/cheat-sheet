@@ -5,6 +5,11 @@ If using zsh and it hasn't been set up to read .bashrc, add miniconda directory 
 export PATH="/Users/suntingt/miniconda/bin:$PATH"
 ```
 
+To deactivate conda base environment at start of terminal, type:
+```
+conda config --set autoactivate_base flase
+```
+
 `-c`: channel, different packages are uploaded to different channels in conda. For example, conda-forge and conda are two different channels.
 `conda list`: List conda package
 `conda env list`: List environments.
