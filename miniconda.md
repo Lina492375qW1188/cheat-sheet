@@ -1,10 +1,5 @@
 Building miniconda environment via mamba
 
-If using zsh and it hasn't been set up to read .bashrc, add miniconda directory to zsh shell PATH environment via
-```
-export PATH="/Users/suntingt/miniconda/bin:$PATH"
-```
-
 To deactivate conda base environment at start of terminal, type:
 ```
 conda config --set autoactivate_base flase
@@ -83,6 +78,15 @@ mamba install -n base -c conda-forge widgetsnbextension
 mamba install -n py36 -c conda-forge ipywidgets
 conda deactivate
 ```
+
+Starting from Catalina, mac OS uses zsh as default cell.
+If using zsh and it hasn't been set up to read .bashrc, add miniconda directory to zsh shell PATH environment via
+```
+export PATH="/Users/suntingt/miniconda/bin:$PATH"
+source /Users/my_username/opt/anaconda3/bin/activate // check my_username by $echo USER
+conda init zsh // or conda init
+```
+Check whether it works using `conda list`
 
 
 Project-patchy-mi
