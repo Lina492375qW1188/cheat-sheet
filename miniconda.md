@@ -117,6 +117,10 @@ mamba install pandas
 
 mamba install -n base -c conda-forge widgetsnbextension
 mamba install -n patchy-mi -c conda-forge ipywidgets
+
+conda config --add channels conda-forge
+mamba install coxeter
+
 conda deactivate
 ```
 
