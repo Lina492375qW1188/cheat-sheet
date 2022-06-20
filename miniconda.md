@@ -76,6 +76,7 @@ mamba install pyg -c pyg
 
 mamba install -n base -c conda-forge widgetsnbextension
 mamba install -n patchy -c conda-forge ipywidgets
+mamba install -c pytorch torchvision
 conda deactivate
 ```
 
@@ -120,6 +121,7 @@ mamba install -n patchy-mi -c conda-forge ipywidgets
 
 conda config --add channels conda-forge
 mamba install coxeter
+mamba install -c pytorch torchvision
 
 conda deactivate
 ```
