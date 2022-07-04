@@ -26,3 +26,5 @@ alias greatlakes="ssh suntingt@greatlakes.arc-ts.umich.edu"
 alias bridges="ssh sunting@bridges2.psc.edu"
 alias deepthought2="ssh sunting@login.deepthought2.umd.edu"
 ```
+
+Use `alias` to see all aliases.
