@@ -50,36 +50,6 @@ mamba install qutip -c conda-forge
 conda deactivate
 ```
 
-Project-patchy
-```
-conda create -n patchy
-conda activate patchy
-conda install mamba -c conda-forge
-mamba install python=3.7 numpy matplotlib jupyterlab=3.1.7 notebook -c conda-forge
-
-mamba install pybind11 -c conda-forge
-mamba install eigen -c conda-forge
-mamba install cmake -c conda-forge
-mamba install qhull -c conda-forge
-mamba install pyside2 -c conda-forge
-mamba install pillow -c conda-forge
-mamba install pytest -c conda-forge
-
-mamba install hoomd -c conda-forge
-mamba install freud -c conda-forge
-mamba install fresnel -c conda-forge
-mamba install gsd -c conda-forge
-mamba install scikit-learn -c intel
-mamba install scipy -c conda
-mamba install -c pytorch pytorch
-mamba install pyg -c pyg
-
-mamba install -n base -c conda-forge widgetsnbextension
-mamba install -n patchy -c conda-forge ipywidgets
-mamba install -c pytorch torchvision
-conda deactivate
-```
-
 Starting from Catalina, mac OS uses zsh as default cell.
 If using zsh and it hasn't been set up to read .bashrc, add miniconda directory to zsh shell PATH environment via
 ```
