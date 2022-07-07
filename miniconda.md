@@ -2,7 +2,7 @@ Building miniconda environment via mamba
 
 To deactivate conda base environment at start of terminal, type:
 ```
-conda config --set autoactivate_base flase
+conda config --set auto_activate_base false
 ```
 
 `-c`: channel, different packages are uploaded to different channels in conda. For example, conda-forge and conda are two different channels.
