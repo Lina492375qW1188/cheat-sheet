@@ -66,32 +66,17 @@ conda create -n patchy-mi
 conda activate patchy-mi
 conda install mamba -c conda-forge
 mamba install python numpy matplotlib jupyterlab notebook -c conda-forge
+mamba install pybind11 eigen cmake qhull pytest -c conda-forge
+pip install PySide6
 
-mamba install pybind11 -c conda-forge
-mamba install eigen -c conda-forge
-mamba install cmake -c conda-forge
-mamba install qhull -c conda-forge
-mamba install pyside2 -c conda-forge
-mamba install pillow -c conda-forge
-mamba install pytest -c conda-forge
-
-mamba install hoomd -c conda-forge
-mamba install freud -c conda-forge
-mamba install fresnel -c conda-forge
-mamba install -c conda-forge signac signac-flow
+mamba install hoomd freud fresnel -c conda-forge
+mamba install signac signac-flow -c conda-forge
 mamba install gsd -c conda-forge
+mamba install coxeter -c conda-forge
+
 mamba install scikit-learn -c intel
-mamba install scipy -c conda
-mamba install -c pytorch pytorch
-mamba install pyg -c pyg
-mamba install pandas
-
-mamba install -n base -c conda-forge widgetsnbextension
-mamba install -n patchy-mi -c conda-forge ipywidgets
-
-conda config --add channels conda-forge
-mamba install coxeter
-mamba install -c pytorch torchvision
+mamba install pytorch torchvision -c pytorch
+mamba install ipywidgets -c conda-forge
 
 conda deactivate
 ```
