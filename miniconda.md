@@ -62,8 +62,8 @@ Check whether it works using `conda list`
 
 Project-patchy-mi
 ```
-conda create -n patchy
-conda activate patchy
+conda create -n patchy-mi
+conda activate patchy-mi
 conda install mamba -c conda-forge
 mamba install python numpy matplotlib jupyterlab notebook -c conda-forge
 
