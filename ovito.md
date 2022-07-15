@@ -1,3 +1,10 @@
+Install Ovito Pro on M1
+Python script plugin `ovitos` is in `\Applications/Ovito.app/Contents/MacOS/`.
+Changing path of `ovitos` to `export PATH="/Applications/Ovito.app/Contents/MacOS/:$PATH"`, then run 
+```
+ovitos -m pip install freud-analysis
+```
+
 Modifier for Steinhardt
 ```
 from ovito.data import *
