@@ -27,7 +27,7 @@ Viewport layers
 ```
 from ovito.vis import *
 import numpy as np
-import PySide2.QtGui
+import PySide6.QtGui
 import rowan
 
 import freud
@@ -60,12 +60,12 @@ def render(
     )
     buf = dp.to_image(cmap="afmhot", vmax=np.max(dp.diffraction))
     width, height, bytes_per_pixel = buf.shape
-    img = PySide2.QtGui.QImage(
+    img = PySide6.QtGui.QImage(
         buf,
         width,
         height,
         width * bytes_per_pixel,
-        PySide2.QtGui.QImage.Format_RGBA8888,
+        PySide6.QtGui.QImage.Format_RGBA8888,
     )
     # Paint QImage onto viewport canvas
     args.painter.drawImage(draw_x, draw_y, img)
