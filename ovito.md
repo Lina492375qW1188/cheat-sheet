@@ -15,7 +15,10 @@ def modify(frame: int, data: DataCollection):
 
     if data.particles is not None:
         ql = freud.order.Steinhardt(l=6)
-        ql.compute(data, neighbors={"r_max": 3})
+        system =  system = freud.AABBQuery.from_system(data)
+        args = {"num_neighbors": 6, "exclude_ii": True}
+        nlist = system.query(data.particles['Position'], args).toNeighborList()
+        ql.compute(system, neighbors=nlist)
         data.particles_.create_property(
             name="Ql", dtype=float, data=ql.particle_order
         )
