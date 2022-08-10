@@ -78,6 +78,8 @@ mamba install scikit-learn -c intel
 mamba install pytorch torchvision -c pytorch
 mamba install ipywidgets -c conda-forge
 
+mamba install umap-learn -c conda-forge
+
 conda deactivate
 ```
 
