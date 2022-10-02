@@ -1,11 +1,11 @@
 Monitor CPU usage:
 ```
-sreport cluster AccountUtilizationByUser -t hour user=$USER --tres cpu start=2022-08-01
+sreport cluster AccountUtilizationByUser -t hour user=$USER --tres cpu start=2022-10-01
 ```
 
 Monitor GPU usage:
 ```
-sreport cluster AccountUtilizationByUser -t hour user=$USER --tres gres/gpu start=2022-08-01
+sreport cluster AccountUtilizationByUser -t hour user=$USER --tres gres/gpu start=2022-10-01
 ```
 
 ---
