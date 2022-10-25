@@ -83,6 +83,25 @@ mamba install umap-learn -c conda-forge
 conda deactivate
 ```
 
+Project-quantum-jump
+```
+conda create -n quantum-jump
+conda activate quantum-jump
+conda install mamba -c conda-forge
+mamba install python numpy matplotlib jupyterlab notebook -c conda-forge
+mamba install pybind11 eigen cmake qhull pytest -c conda-forge
+
+mamba install signac signac-flow -c conda-forge
+
+mamba install scikit-learn -c intel
+mamba install pytorch torchvision -c pytorch
+mamba install ipywidgets -c conda-forge
+
+mamba install qutip -c conda-forge
+
+conda deactivate
+```
+
 
 Remove environment: 
 ```
