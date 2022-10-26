@@ -90,6 +90,7 @@ conda activate quantum-jump
 conda install mamba -c conda-forge
 mamba install python numpy matplotlib jupyterlab notebook -c conda-forge
 mamba install pybind11 eigen cmake qhull pytest -c conda-forge
+conda install pandas -c anaconda
 
 mamba install signac signac-flow -c conda-forge
 
