@@ -1,3 +1,4 @@
+```
 #!/bin/bash
 #SBATCH -t 03:30:00
 #SBATCH -N 1
@@ -6,7 +7,7 @@
 #SBATCH --job-name="ps-LSTM0"
 
 singularity exec /ocean/containers/ngc/pytorch/pytorch_latest.sif python3 -u ps-LSTM_ops.py
-
+```
 
 CPU job file example:
 
