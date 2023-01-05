@@ -9,6 +9,7 @@ singularity exec /ocean/containers/ngc/pytorch/pytorch_latest.sif python3 -u ps-
 
 
 CPU job file example:
+
 ```
 #!/bin/bash
 #SBATCH --job-name=moment-inertia
@@ -23,7 +24,9 @@ singularity exec --bind /ocean $PROJECT/software.sif python3 project_init.py
 mpirun -n 2 singularity exec --bind /ocean $PROJECT/software.sif python3 project_run.py
 ```
 
+
 GPU job file example:
+
 ```
 #!/bin/bash
 
@@ -40,3 +43,4 @@ module load gcc/10.3.0 openmpi/4.1.4 singularity
 
 mpirun -n 1 singularity exec /scratch/sglotzer_root/sglotzer0/suntingt/software.sif python3 npt.py
 ```
+
