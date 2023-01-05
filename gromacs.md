@@ -8,3 +8,24 @@ Center `.xtc`
 ```
 gmx_mpi trjconv -f name.xtc -s name.tpr -pbc mol -ur compact -center -o outputfile.xtc
 ```
+
+Create `.tpr` for umbrella sampling
+```
+module load gromacs/2020.2-cpu (example on bridges)
+  
+frame=$1
+window=$2
+Topology=argon.top
+Parameters=LJ_md.mdp
+InitialGeo=Ar_rho\=0.0004423_N\=512_cubic.pdb
+Filename=md
+TprFile=${Filename}_${window}.tpr
+
+gmx_mpi grompp \
+       -f ${Parameters}    \
+       -c ${InitialGeo}    \
+       -p ${Topology}      \
+       -t md.trr           \
+       -time ${frame}      \
+       -o ${TprFile}
+```
