@@ -25,14 +25,6 @@ mpirun -n 2 singularity exec --bind /ocean $PROJECT/software.sif python3 project
 
 GPU job file example:
 ```
-#!/bin/bash
-  
-#SBATCH --job-name=moment-inertia
-#SBATCH --time=00:20:00
-#SBATCH --partition=GPU-shared
-#SBATCH --gres=gpu:1
-#SBATCH --ntasks-per-gpu=1
-
 module load openmpi/4.0.5-gcc10.2.0
 
 singularity exec --bind /ocean $PROJECT/software.sif python3 project_init.py
