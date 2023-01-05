@@ -30,18 +30,16 @@ GPU job file example:
 
 ```
 #!/bin/bash
+  
+#SBATCH --job-name=moment-inertia
+#SBATCH --time=00:20:00
+#SBATCH --partition=GPU-shared
+#SBATCH --gres=gpu:1
+#SBATCH --ntasks-per-gpu=1
 
-#SBATCH --job-name=test_job
-#SBATCH --mail-user=suntingt@umich.edu
-#SBATCH --cpus-per-task=1
-#SBATCH --nodes=1
-#SBATCH --ntasks-per-node=1
-#SBATCH --time=05:00:00
-#SBATCH --partition=standard
+module load openmpi/4.0.5-gcc10.2.0
 
-module load singularity
-module load gcc/10.3.0 openmpi/4.1.4 singularity
-
-mpirun -n 1 singularity exec /scratch/sglotzer_root/sglotzer0/suntingt/software.sif python3 npt.py
+singularity exec --bind /ocean $PROJECT/software.sif python3 project_init.py
+mpirun -n 1 singularity exec --bind /ocean --nv $PROJECT/software.sif python3 project_run.py
 ```
 
