@@ -80,6 +80,8 @@ mamba install ipywidgets -c conda-forge
 
 mamba install umap-learn -c conda-forge
 
+pip install pyg-lib torch-geometric -f https://data.pyg.org/whl/torch-1.10.0+cpu.html
+
 conda deactivate
 ```
 
