@@ -81,7 +81,7 @@ conda init zsh // or conda init
 Check whether it works using `conda list`
 
 
-Project-patchy-mi
+Project-patchy
 ```
 conda create -n patchy-mi
 conda activate patchy-mi
