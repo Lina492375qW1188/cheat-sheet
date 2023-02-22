@@ -111,4 +111,4 @@ conda env remove -n [env_name]
 
 Update on Feb 21, 2023:
 
-It seems to me that scikit-learn, torch-scatter, torch-sparse do not support pytorch>1.10
+It seems to me that scikit-learn, torch-scatter, torch-sparse do not support python>1.10
