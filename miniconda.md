@@ -50,39 +50,6 @@ mamba install qutip -c conda-forge
 conda deactivate
 ```
 
-Starting from Catalina, mac OS uses zsh as default cell.
-If using zsh and it hasn't been set up to read .bashrc, add miniconda directory to zsh shell PATH environment via
-```
-export PATH="/Users/suntingt/miniconda/bin:$PATH"
-source /Users/my_username/opt/anaconda3/bin/activate // check my_username by $echo USER
-conda init zsh // or conda init
-```
-Check whether it works using `conda list`
-
-
-Project-patchy-mi
-```
-conda create -n patchy-mi
-conda activate patchy-mi
-conda install mamba -c conda-forge
-mamba install python numpy matplotlib jupyterlab notebook -c conda-forge
-mamba install pybind11 eigen cmake qhull pytest -c conda-forge
-pip install PySide6
-
-mamba install hoomd freud fresnel -c conda-forge
-mamba install signac signac-flow -c conda-forge
-mamba install gsd -c conda-forge
-mamba install coxeter -c conda-forge
-
-mamba install scikit-learn -c intel
-mamba install pytorch torchvision -c pytorch
-mamba install ipywidgets -c conda-forge
-
-mamba install umap-learn -c conda-forge
-
-conda deactivate
-```
-
 Project-quantum-jump
 ```
 conda create -n quantum-jump
@@ -101,6 +68,67 @@ mamba install ipywidgets -c conda-forge
 mamba install qutip -c conda-forge
 
 conda deactivate
+```
+
+
+Starting from Catalina, mac OS uses zsh as default cell.
+If using zsh and it hasn't been set up to read .bashrc, add miniconda directory to zsh shell PATH environment via
+```
+export PATH="/Users/suntingt/miniconda/bin:$PATH"
+source /Users/my_username/opt/anaconda3/bin/activate // check my_username by $echo USER
+conda init zsh // or conda init
+```
+Check whether it works using `conda list`
+
+
+Project-patchy-mi
+```
+conda create -n patchy-mi
+conda activate patchy-mi
+conda install mamba -c conda-forge
+mamba install python=3.9 numpy matplotlib jupyterlab notebook -c conda-forge
+mamba install pybind11 eigen cmake qhull pytest -c conda-forge
+pip install PySide6
+
+mamba install hoomd freud fresnel -c conda-forge
+mamba install signac signac-flow -c conda-forge
+mamba install gsd -c conda-forge
+mamba install coxeter -c conda-forge
+
+mamba install scikit-learn -c intel
+mamba install pytorch torchvision -c pytorch
+mamba install ipywidgets -c conda-forge
+
+mamba install umap-learn -c conda-forge
+
+conda deactivate
+```
+
+Project-gnn
+```
+conda activate gnn
+conda install mamba -c conda-forge
+mamba install python=3.9 numpy matplotlib jupyterlab notebook -c conda-forge
+mamba install pybind11 eigen cmake qhull pytest -c conda-forge
+pip install PySide6
+
+mamba install hoomd freud fresnel -c conda-forge
+mamba install signac signac-flow -c conda-forge
+mamba install gsd -c conda-forge
+mamba install coxeter -c conda-forge
+
+mamba install scikit-learn -c intel
+mamba install pytorch torchvision -c pytorch
+mamba install ipywidgets -c conda-forge
+
+conda install -y clang_osx-arm64 clangxx_osx-arm64 gfortran_osx-arm64
+
+# Test on MACOSX-M1 version 12.6
+MACOSX_DEPLOYMENT_TARGET=12.6 CC=clang CXX=clang++ python -m pip --no-cache-dir  install  torch-scatter -f https://data.pyg.org/whl/torch-1.13.1+${cpu}.html
+
+MACOSX_DEPLOYMENT_TARGET=12.6 CC=clang CXX=clang++ python -m pip --no-cache-dir  install  torch-sparse -f https://data.pyg.org/whl/torch-1.13.1+${cpu}.html
+
+MACOSX_DEPLOYMENT_TARGET=12.6 CC=clang CXX=clang++ python -m pip --no-cache-dir  install  torch-geometric
 ```
 
 
