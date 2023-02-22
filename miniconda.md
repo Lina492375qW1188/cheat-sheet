@@ -109,6 +109,6 @@ Remove environment:
 conda env remove -n [env_name]
 ```
 
-Update on Feb 21, 2023:
+Update on Feb 22, 2023:
 
-It seems that scikit-learn, torch-scatter, torch-sparse do not support python>3.10
+package scikit-learn-0.24.2-py39h9197a36_1 requires python >=3.9,<3.10.0a0
