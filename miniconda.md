@@ -106,6 +106,7 @@ conda deactivate
 
 Project-gnn
 ```
+conda create -n gnn
 conda activate gnn
 conda install mamba -c conda-forge
 mamba install python=3.9 numpy matplotlib jupyterlab notebook -c conda-forge
