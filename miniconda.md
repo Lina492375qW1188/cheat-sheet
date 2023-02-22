@@ -65,7 +65,7 @@ Project-patchy-mi
 conda create -n patchy-mi
 conda activate patchy-mi
 conda install mamba -c conda-forge
-mamba install python numpy matplotlib jupyterlab notebook -c conda-forge
+mamba install python=3.9 numpy matplotlib jupyterlab notebook -c conda-forge
 mamba install pybind11 eigen cmake qhull pytest -c conda-forge
 pip install PySide6
 
@@ -79,6 +79,11 @@ mamba install pytorch torchvision -c pytorch
 mamba install ipywidgets -c conda-forge
 
 mamba install umap-learn -c conda-forge
+
+pip install git+https://github.com/pyg-team/pyg-lib.git
+pip install torch-scatter
+pip install torch-sparse
+pip install torch-geometric
 
 conda deactivate
 ```
@@ -111,4 +116,4 @@ conda env remove -n [env_name]
 
 Update on Feb 21, 2023:
 
-It seems to me that scikit-learn, torch-scatter, torch-sparse do not support python>1.10
+It seems that scikit-learn, torch-scatter, torch-sparse do not support python>3.10
