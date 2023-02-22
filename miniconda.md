@@ -83,8 +83,8 @@ Check whether it works using `conda list`
 
 Project-patchy
 ```
-conda create -n patchy-mi
-conda activate patchy-mi
+conda create -n patchy
+conda activate patchy
 conda install mamba -c conda-forge
 mamba install python=3.9 numpy matplotlib jupyterlab notebook -c conda-forge
 mamba install pybind11 eigen cmake qhull pytest -c conda-forge
