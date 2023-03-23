@@ -132,6 +132,30 @@ MACOSX_DEPLOYMENT_TARGET=12.6 CC=clang CXX=clang++ python -m pip --no-cache-dir 
 MACOSX_DEPLOYMENT_TARGET=12.6 CC=clang CXX=clang++ python -m pip --no-cache-dir  install  torch-geometric
 ```
 
+Project-alchemy
+```
+conda create -n alchemy
+conda activate alchemy
+conda install mamba -c conda-forge
+mamba install python=3.9 numpy matplotlib jupyterlab notebook -c conda-forge
+mamba install pybind11 eigen cmake qhull pytest -c conda-forge
+pip install PySide6
+
+git clone --recursive https://github.com/glotzerlab/hoomd-blue
+cmake -B build/hoomd -S hoomd-blue
+cmake --build build/hoomd
+cmake --install build/hoomd
+
+mamba install freud fresnel -c conda-forge
+mamba install signac signac-flow -c conda-forge
+mamba install gsd -c conda-forge
+mamba install coxeter -c conda-forge
+
+mamba install ipywidgets -c conda-forge
+
+conda deactivate
+```
+
 
 Remove environment: 
 ```
