@@ -157,19 +157,36 @@ conda deactivate
 ```
 
 
-Project-pysages on bridges
+Project-pysages on bridges (Pysages not working)
 ```
-conda create -n pysages python=3.9
+conda create -n pysages python=3.10
 conda activate pysages
-
-module load cuda
 
 conda install hoomd=3.8.1 -c conda-forge
 conda install hoomd-dlext=0.3.0 -c conda-forge
-conda install -c conda-forge jax=0.3.25
 
-conda deactivate
+python3.10 -m pip install --upgrade pip
+python3.10 -m pip install --upgrade "jax[cpu]"
+
+git clone https://github.com/SSAGESLabs/PySAGES.git
+cd PySAGES
+python3.10 -m pip install .
 ```
+
+Project-pysages on GreatLakes (doesn't even have hoomd installed correctly)
+```
+module load python3.9-anaconda
+conda create -n pysages
+conda activate pysages
+
+conda install hoomd=3.8.1 -c conda-forge
+conda install hoomd-dlext=0.3.0 -c conda-forge
+
+python -m pip install --upgrade pip
+python -m pip install --upgrade "jax[cpu]"
+```
+
+
 
 
 
