@@ -157,7 +157,7 @@ conda deactivate
 ```
 
 
-Project-patchy
+Project-test
 ```
 conda create -n patchy
 conda activate patchy
