@@ -157,25 +157,16 @@ conda deactivate
 ```
 
 
-Project-test
+Project-pysages on bridges
 ```
-conda create -n patchy
-conda activate patchy
-conda install mamba -c conda-forge
-mamba install python=3.9 numpy matplotlib jupyterlab notebook -c conda-forge
-mamba install pybind11 eigen cmake qhull pytest -c conda-forge
-pip install PySide6
+conda create -n pysages python=3.9
+conda activate pysages
 
-mamba install hoomd freud fresnel -c conda-forge
-mamba install signac signac-flow -c conda-forge
-mamba install gsd -c conda-forge
-mamba install coxeter -c conda-forge
+module load cuda
 
-mamba install scikit-learn -c intel
-mamba install pytorch torchvision -c pytorch
-mamba install ipywidgets -c conda-forge
-
-mamba install umap-learn -c conda-forge
+conda install hoomd=3.8.1 -c conda-forge
+conda install hoomd-dlext=0.3.0 -c conda-forge
+conda install -c conda-forge jax=0.3.25
 
 conda deactivate
 ```
