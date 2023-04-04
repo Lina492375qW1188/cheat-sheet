@@ -43,3 +43,26 @@ singularity exec --bind /ocean $PROJECT/software.sif python3 project_init.py
 mpirun -n 1 singularity exec --bind /ocean --nv $PROJECT/software.sif python3 project_run.py
 ```
 
+
+
+Project-alchemy
+```
+module load anaconda3
+conda create -n alchemy python=3.9
+conda activate alchemy
+conda install mamba -c conda-forge
+mamba install pybind11 eigen cmake qhull pytest -c conda-forge
+pip install PySide6
+
+git clone --recursive https://github.com/glotzerlab/hoomd-blue
+cmake -B build/hoomd -S hoomd-blue
+cmake --build build/hoomd
+cmake --install build/hoomd
+
+mamba install gsd -c conda-forge
+mamba install coxeter -c conda-forge
+
+mamba install ipywidgets -c conda-forge
+
+conda deactivate
+```
