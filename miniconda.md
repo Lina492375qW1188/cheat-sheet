@@ -157,53 +157,6 @@ conda deactivate
 ```
 
 
-Project-pysages on bridges (Pysages not working)
-```
-conda create -n pysages python=3.10
-conda activate pysages
-
-conda install hoomd=3.8.1 -c conda-forge
-conda install hoomd-dlext=0.3.0 -c conda-forge
-
-python3.10 -m pip install --upgrade pip
-python3.10 -m pip install --upgrade "jax[cpu]"
-
-git clone https://github.com/SSAGESLabs/PySAGES.git
-cd PySAGES
-python3.10 -m pip install .
-```
-
-bridges second try, building with CUDA version
-```
-module load cuda
-conda update -n base -c conda-forge conda
-conda create -n pysages python=3.10
-conda activate pysages
-conda install hoomd=3.8.1 -c conda-forge
-conda install hoomd-dlext -c conda-forge
-python3.10 -m pip install --upgrade "jax[cuda11_local]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
-conda install jax-md -c conda-forge or python3.10 -m pip install jax-md --upgrade
-python3.10 -m pip install git+https://github.com/SSAGESLabs/PySAGES.git
-```
-
-
-Project-pysages on GreatLakes (doesn't even have hoomd installed correctly)
-```
-module load python3.9-anaconda
-conda create -n pysages
-conda activate pysages
-
-conda install hoomd=3.8.1 -c conda-forge
-conda install hoomd-dlext=0.3.0 -c conda-forge
-
-python -m pip install --upgrade pip
-python -m pip install --upgrade "jax[cpu]"
-```
-
-
-
-
-
 Remove environment: 
 ```
 conda env remove -n [env_name]
