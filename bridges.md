@@ -53,7 +53,6 @@ conda create -n alchemy python=3.9
 conda activate alchemy
 conda install mamba -c conda-forge
 mamba install pybind11 eigen cmake qhull pytest -c conda-forge
-pip install PySide6
 
 git clone --recursive https://github.com/glotzerlab/hoomd-blue
 cmake -B build/hoomd -S hoomd-blue
@@ -67,6 +66,10 @@ mamba install ipywidgets -c conda-forge
 
 conda deactivate
 ```
+
+
+
+
 
 job file for project-alchemy
 ```
