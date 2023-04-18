@@ -156,22 +156,6 @@ mamba install ipywidgets -c conda-forge
 conda deactivate
 ```
 
-Project-tesseract
-```
-conda create -n tesseract
-conda activate tesseract
-
-conda install mamba -c conda-forge
-mamba install python=3.9 numpy matplotlib jupyterlab notebook -c conda-forge
-mamba install opencv -c conda-forge
-pip3 install pillow
-
-mamba install tesseract pytesseract -c conda-forge
-
-conda deactivate
-```
-
-
 Remove environment: 
 ```
 conda env remove -n [env_name]
