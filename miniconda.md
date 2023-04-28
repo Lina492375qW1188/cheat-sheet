@@ -156,6 +156,24 @@ mamba install ipywidgets -c conda-forge
 conda deactivate
 ```
 
+Project-dgl
+```
+conda create -n dgl
+conda acitvate dgl
+conda install mamba -c conda-forge
+
+mamba install python=3.9 numpy matplotlib jupyterlab notebook -c conda-forge
+mamba install scikit-learn -c intel
+mamba install pytorch torchvision -c pytorch
+mamba install ipywidgets -c conda-forge
+
+conda install -y clang_osx-arm64 clangxx_osx-arm64 gfortran_osx-arm64
+
+MACOSX_DEPLOYMENT_TARGET=12.6 CC=clang CXX=clang++ python -m pip --no-cache-dir install dgl -f https://data.dgl.ai/wheels/repo.html
+```
+
+
+
 Remove environment: 
 ```
 conda env remove -n [env_name]
