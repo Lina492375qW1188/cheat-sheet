@@ -71,18 +71,6 @@ CMake Error in hoomd/CMakeLists.txt:
 
   * The installation package was faulty and references files it does not
   provide.
-  
-  
-
-cmake --build build/hoomd
-cmake --install build/hoomd
-
-mamba install gsd -c conda-forge
-mamba install coxeter -c conda-forge
-
-mamba install ipywidgets -c conda-forge
-
-conda deactivate
 ```
 
 
