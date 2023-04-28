@@ -56,7 +56,7 @@ conda install mamba -c conda-forge
 mamba install pybind11 eigen cmake qhull pytest -c conda-forge
 
 git clone --recursive https://github.com/glotzerlab/hoomd-blue
-cmake -B build/hoomd -S hoomd-blue ENABLE_MPI=on
+cmake -B build/hoomd -S hoomd-blue -DENABLE_MPI=on
 cmake --build build/hoomd
 cmake --install build/hoomd
 
