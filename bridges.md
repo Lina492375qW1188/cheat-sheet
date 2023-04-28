@@ -48,6 +48,7 @@ mpirun -n 1 singularity exec --bind /ocean --nv $PROJECT/software.sif python3 pr
 
 Project-alchemy
 ```
+module load openmpi/4.0.5-gcc10.2.0
 module load anaconda3
 conda create -n alchemy python=3.9
 conda activate alchemy
