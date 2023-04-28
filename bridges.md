@@ -57,6 +57,23 @@ mamba install pybind11 eigen cmake qhull pytest -c conda-forge
 
 git clone --recursive https://github.com/glotzerlab/hoomd-blue
 cmake -B build/hoomd -S hoomd-blue -DENABLE_MPI=on
+
+CMake Error in hoomd/CMakeLists.txt:
+  Imported target "cereal::cereal" includes non-existent path
+
+    "cereal_INCLUDE_DIR-NOTFOUND"
+
+  in its INTERFACE_INCLUDE_DIRECTORIES.  Possible reasons include:
+
+  * The path was deleted, renamed, or moved to another location.
+
+  * An install or uninstall procedure did not complete successfully.
+
+  * The installation package was faulty and references files it does not
+  provide.
+  
+  
+
 cmake --build build/hoomd
 cmake --install build/hoomd
 
