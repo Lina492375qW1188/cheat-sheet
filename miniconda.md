@@ -130,6 +130,8 @@ MACOSX_DEPLOYMENT_TARGET=12.6 CC=clang CXX=clang++ python -m pip --no-cache-dir 
 MACOSX_DEPLOYMENT_TARGET=12.6 CC=clang CXX=clang++ python -m pip --no-cache-dir  install  torch-sparse -f https://data.pyg.org/whl/torch-1.13.1+${cpu}.html
 
 MACOSX_DEPLOYMENT_TARGET=12.6 CC=clang CXX=clang++ python -m pip --no-cache-dir  install  torch-geometric
+
+MACOSX_DEPLOYMENT_TARGET=12.6 CC=clang CXX=clang++ python -m pip --no-cache-dir install dgl -f https://data.dgl.ai/wheels/repo.html
 ```
 
 Project-alchemy
@@ -154,22 +156,6 @@ mamba install coxeter -c conda-forge
 mamba install ipywidgets -c conda-forge
 
 conda deactivate
-```
-
-Project-dgl
-```
-conda create -n dgl
-conda acitvate dgl
-conda install mamba -c conda-forge
-
-mamba install python=3.9 numpy matplotlib jupyterlab notebook -c conda-forge
-mamba install scikit-learn -c intel
-mamba install pytorch torchvision -c pytorch
-mamba install ipywidgets -c conda-forge
-
-conda install -y clang_osx-arm64 clangxx_osx-arm64 gfortran_osx-arm64
-
-MACOSX_DEPLOYMENT_TARGET=12.6 CC=clang CXX=clang++ python -m pip --no-cache-dir install dgl -f https://data.dgl.ai/wheels/repo.html
 ```
 
 
