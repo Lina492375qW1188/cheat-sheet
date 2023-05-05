@@ -71,6 +71,9 @@ CMake Error in hoomd/CMakeLists.txt:
 
   * The installation package was faulty and references files it does not
   provide.
+  
+Will try using install hoomd-blue/install-prereq-headers.py to install!!
+  
 ```
 
 
