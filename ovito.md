@@ -16,6 +16,9 @@ ovitos -m pip --no-cache-dir  install  torch-sparse -f https://data.pyg.org/whl/
 ovitos -m pip --no-cache-dir  install  torch-geometric
 ```
 and install `dgl` with
+```
+ovitos -m pip --no-cache-dir install dgl -f https://data.dgl.ai/wheels/repo.html
+```
 
 Modifier for Steinhardt
 ```
