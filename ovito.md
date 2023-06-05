@@ -5,6 +5,18 @@ Changing path of `ovitos` to `export PATH="/Applications/Ovito.app/Contents/MacO
 ovitos -m pip install freud-analysis
 ```
 
+To install `torch-geometric` and `dgl` with ovitos, must upgrad ovitos pip to version `23.1.2` with
+```
+/Applications/Ovito.app/Contents/MacOS/Ovito.app/Contents/MacOS/ovitos -m pip install --upgrade pip
+```
+then install `torch-geometric` with
+```
+ovitos -m pip --no-cache-dir  install  torch-scatter -f https://data.pyg.org/whl/torch-1.13.1+${cpu}.html
+ovitos -m pip --no-cache-dir  install  torch-sparse -f https://data.pyg.org/whl/torch-1.13.1+${cpu}.html\
+ovitos -m pip --no-cache-dir  install  torch-geometric
+```
+and install `dgl` with
+
 Modifier for Steinhardt
 ```
 from ovito.data import *
