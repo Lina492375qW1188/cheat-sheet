@@ -1,5 +1,8 @@
 `my_quotas` : check usage of storage.
+
 `du -sh`: check on your local file space usage type
+
+`du -a --threshold=10000000000`: list files of threshold
 
 
 job file for project-lstm
