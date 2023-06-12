@@ -1,4 +1,5 @@
 `my_quotas` : check usage of storage.
+`du -sh`: check on your local file space usage type
 
 
 job file for project-lstm
