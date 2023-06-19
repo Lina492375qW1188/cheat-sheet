@@ -27,7 +27,6 @@ Modifier for Steinhardt
 from ovito.data import *
 import freud
 
-
 def modify(frame: int, data: DataCollection):
 
     if data.particles is not None:
@@ -40,6 +39,29 @@ def modify(frame: int, data: DataCollection):
             name="Ql", dtype=float, data=ql.particle_order
         )
         print(f"Created Ql property for {data.particles.count} particles.")
+```
+Modifier for loading gsd via SourceFile provided by ovito as global attribute.
+```
+from ovito.data import *
+
+import gsd.hoomd
+
+def modify(frame: int, data: DataCollection):
+    """
+    This is a modifier demonstrating how to use SourceFile to load gsd.
+    """
+    traj = gsd.hoomd.open(data.attributes['SourceFile'])
+    f = traj[frame]
+    
+    gsd_r1 = 0.5 * f.particles.type_shapes[0]['diameter']
+    gsd_r2 = 0.5 * f.particles.type_shapes[1]['diameter']
+    
+    print(gsd_r1, gsd_r2)
+    
+    ovito_r1 = data.particles_.particle_types_.type_by_id_(0).radius
+    ovito_r2 = data.particles_.particle_types_.type_by_id_(1).radius
+    print(ovito_r1, ovito_r2)
+
 ```
 
 
