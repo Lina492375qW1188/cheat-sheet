@@ -2,6 +2,7 @@ Install Ovito Pro on M1
 Python script plugin `ovitos` is in `\Applications/Ovito.app/Contents/MacOS/`.
 Changing path of `ovitos` to `export PATH="/Applications/Ovito.app/Contents/MacOS/:$PATH"`, then run 
 ```
+ovitos -m pip install gsd
 ovitos -m pip install freud-analysis
 ```
 
@@ -11,8 +12,9 @@ To install `torch-geometric` and `dgl` with ovitos, must upgrad ovitos pip to ve
 ```
 then install `torch-geometric` with
 ```
+ovitos -m pip install torch
 ovitos -m pip --no-cache-dir  install  torch-scatter -f https://data.pyg.org/whl/torch-1.13.1+${cpu}.html
-ovitos -m pip --no-cache-dir  install  torch-sparse -f https://data.pyg.org/whl/torch-1.13.1+${cpu}.html\
+ovitos -m pip --no-cache-dir  install  torch-sparse -f https://data.pyg.org/whl/torch-1.13.1+${cpu}.html
 ovitos -m pip --no-cache-dir  install  torch-geometric
 ```
 and install `dgl` with
