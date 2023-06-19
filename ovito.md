@@ -4,6 +4,7 @@ Changing path of `ovitos` to `export PATH="/Applications/Ovito.app/Contents/MacO
 ```
 ovitos -m pip install gsd
 ovitos -m pip install freud-analysis
+ovitos -m pip install matplotlib
 ```
 
 To install `torch-geometric` and `dgl` with ovitos, must upgrad ovitos pip to version `23.1.2` with
