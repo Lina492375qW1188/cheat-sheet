@@ -158,6 +158,17 @@ mamba install ipywidgets -c conda-forge
 conda deactivate
 ```
 
+Project-plumed
+```
+conda create -n plumed
+
+conda activate plumed
+conda install mamba -c conda-forge
+mamba install -c conda-forge plumed
+
+conda deactivate
+```
+
 
 
 Remove environment: 
