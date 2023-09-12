@@ -154,7 +154,6 @@ mamba install gsd -c conda-forge
 mamba install coxeter -c conda-forge
 
 mamba install ipywidgets -c conda-forge
-conda install -c anaconda pillow
 
 conda deactivate
 ```
