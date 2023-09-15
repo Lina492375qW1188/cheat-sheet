@@ -90,6 +90,7 @@ mamba install python=3.9 numpy matplotlib jupyterlab notebook -c conda-forge
 mamba install pybind11 eigen cmake qhull pytest -c conda-forge
 pip install PySide6
 
+(HOOMD-blue version 3.9.0 for now)
 mamba install hoomd freud fresnel -c conda-forge
 mamba install signac signac-flow -c conda-forge
 mamba install gsd -c conda-forge
