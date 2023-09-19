@@ -140,7 +140,7 @@ Project-alchemy
 conda create -n alchemy
 conda activate alchemy
 conda install mamba -c conda-forge
-mamba install python=3.9 numpy matplotlib jupyterlab notebook -c conda-forge
+mamba install python numpy matplotlib jupyterlab notebook -c conda-forge
 mamba install pybind11 eigen cmake qhull pytest -c conda-forge
 pip install PySide6
 
