@@ -23,53 +23,6 @@ conda install -c conda-forge mamba
 mamba install other things -c [channel]
 ```
 
-My environment:
-Project-SGOOP
-```
-conda create -n sgoop
-conda activate sgoop
-conda install mamba -c conda-forge
-mamba install python=3.7 numpy matplotlib jupyterlab=3.1.7 notebook -c conda-forge
-mamba install scipy -c conda
-mamba install scikit-learn -c intel
-mamba install pyemma -c conda-forge
-conda deactivate
-```
-
-Project-LSTM
-```
-conda create -n lstm
-conda activate lstm
-conda install mamba -c conda-forge
-mamba install python numpy matplotlib jupyterlab notebook -c conda-forge
-mamba install scipy -c conda
-mamba install scikit-learn -c intel
-mamba install -c pytorch pytorch
-mamba install pyemma -c conda-forge
-mamba install qutip -c conda-forge
-conda deactivate
-```
-
-Project-quantum-jump
-```
-conda create -n quantum-jump
-conda activate quantum-jump
-conda install mamba -c conda-forge
-mamba install python numpy matplotlib jupyterlab notebook -c conda-forge
-mamba install pybind11 eigen cmake qhull pytest -c conda-forge
-conda install pandas -c anaconda
-
-mamba install signac signac-flow -c conda-forge
-
-mamba install scikit-learn -c intel
-mamba install pytorch torchvision -c pytorch
-mamba install ipywidgets -c conda-forge
-
-mamba install qutip -c conda-forge
-
-conda deactivate
-```
-
 
 Starting from Catalina, mac OS uses zsh as default cell.
 If using zsh and it hasn't been set up to read .bashrc, add miniconda directory to zsh shell PATH environment via
@@ -80,30 +33,6 @@ conda init zsh // or conda init
 ```
 Check whether it works using `conda list`
 
-
-Project-patchy
-```
-conda create -n patchy
-conda activate patchy
-conda install mamba -c conda-forge
-mamba install python=3.9 numpy matplotlib jupyterlab notebook -c conda-forge
-mamba install pybind11 eigen cmake qhull pytest -c conda-forge
-pip install PySide6
-
-(HOOMD-blue version 3.9.0 for now)
-mamba install hoomd freud fresnel -c conda-forge
-mamba install signac signac-flow -c conda-forge
-mamba install gsd -c conda-forge
-mamba install coxeter -c conda-forge
-
-mamba install scikit-learn -c intel
-mamba install pytorch torchvision -c pytorch
-mamba install ipywidgets -c conda-forge
-
-mamba install umap-learn -c conda-forge
-
-conda deactivate
-```
 
 Project-gnn
 ```
@@ -176,19 +105,6 @@ mamba install coxeter -c conda-forge
 mamba install scikit-learn -c intel
 mamba install pytorch torchvision -c pytorch
 mamba install ipywidgets -c conda-forge
-
-conda deactivate
-```
-
-
-
-Project-plumed
-```
-conda create -n plumed
-
-conda activate plumed
-conda install mamba -c conda-forge
-mamba install -c conda-forge plumed
 
 conda deactivate
 ```
