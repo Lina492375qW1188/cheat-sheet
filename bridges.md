@@ -24,15 +24,16 @@ For running CPU job with gromacs, load cpu version. Note that `module load groma
 #!/bin/bash
 #SBATCH --job-name="aladip"
 #SBATCH -p RM-shared
-#SBATCH -t 01:00:00
+#SBATCH -t 00:30:00
+#SBATCH -N 1
+#SBATCH --ntasks-per-node 1
 #SBATCH --mem-per-cpu=256
-#SBATCH --ntasks-per-node 4
 
 module load plumed
 module load gcc
 module load gromacs/2020.2-cpu
 
-mpirun -np $SLURM_NPROCS gmx_mpi mdrun -deffnm aladip -plumed plumed_metaD.dat -cpi md_0_1.cpt
+mpirun -np 1 gmx_mpi mdrun -ntomp 8 -deffnm aladip -plumed plumed_metaD.dat -cpi md_0_1.cpt
 ```
 
 ```
