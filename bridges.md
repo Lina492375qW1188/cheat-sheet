@@ -19,6 +19,22 @@ singularity exec /ocean/containers/ngc/pytorch/pytorch_latest.sif python3 -u ps-
 
 CPU job file example:
 
+For running CPU job with gromacs, load cpu version. Note that `module load gromacs` will load `gromacs/2020.4-gpu`.
+```
+#!/bin/bash
+#SBATCH --job-name="aladip"
+#SBATCH -p RM-shared
+#SBATCH -t 01:00:00
+#SBATCH --mem-per-cpu=256
+#SBATCH --ntasks-per-node 4
+
+module load plumed
+module load gcc
+module load gromacs/2020.2-cpu
+
+mpirun -np $SLURM_NPROCS gmx_mpi mdrun -deffnm aladip -plumed plumed_metaD.dat -cpi md_0_1.cpt
+```
+
 ```
 #!/bin/bash
 #SBATCH --job-name=moment-inertia
