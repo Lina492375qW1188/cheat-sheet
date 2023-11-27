@@ -9,6 +9,11 @@ Center `.xtc`
 gmx_mpi trjconv -f name.xtc -s name.tpr -pbc mol -ur compact -center -o outputfile.xtc
 ```
 
+Remove global rotational motion (alanine dipeptide):
+```
+gmx_mpi trjconv -s aladip.tpr -f aladip.trr -o aladip_no_rot.trr -fit rot
+```
+
 Create `.tpr` for umbrella sampling
 ```
 module load gromacs/2020.2-cpu (example on bridges)
