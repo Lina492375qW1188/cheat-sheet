@@ -84,6 +84,7 @@ mamba install gsd -c conda-forge
 mamba install coxeter -c conda-forge
 
 mamba install ipywidgets -c conda-forge
+mamba install -c conda-forge yapf
 
 conda deactivate
 ```
