@@ -1,17 +1,17 @@
 There are many ways to build lammps with plumed support. Refer to `lammps*/lib/plumed/README` and `lammps/src/PLUMED` for more details.
 
-Build LAMMPS with PLUMED on bridges2:
-
+# Bridges2
+My test of building LAMMPS with PLUMED on bridges2 (`lammps*` means the LAMMPS folder):
 ```
 cd lammps*/src/
-make lib-plumed args="b"
+make lib-plumed args="b" # also check make lib-plumed for more options.
 make yes-plumed
 make mpi
 ```
 
-Build LAMMPS with PLUMED on mac os arm64, using cmake and traditional patching way (deprecated after plumed-2.4.8)
-
-# First prepare a conda environment for LAMMPS and PLUMED
+# Mac os arm64, using cmake and traditional patching way (deprecated after plumed-2.4.8)
+I've tried this method on bridges2 but failed.
+1. First prepare a conda environment for LAMMPS and PLUMED
 ```
 conda create -n lammps
 conda activate lammps
@@ -22,14 +22,14 @@ mamba install cmake -c conda-forge
 mamba install conda-forge::gsl
 ```
 
-# Create a directory for lammps and unzip LAMMPS and PLUMED tarball.
+2. Create a directory for lammps and unzip LAMMPS and PLUMED tarball.
 ```
 mkdir lammps_plumed
 tar -xvzf lammps*
 tar -xvzf plumed*
 ```
 
-# Build PLUMED first
+3. Build PLUMED first
 ```
 cd plumed*/
 ./configure --prefix=[My_Path]
@@ -38,13 +38,13 @@ make -j 4
 make install
 ```
 
-# Go to LAMMPS folder and patch with PLUMED.
+4. Go to LAMMPS folder and patch with PLUMED.
 ```
 plumed patch -p
 ```
 There should be options showing up. Choosing the appropriate option for patching with LAMMPS.
 
-# Build LAMMPS with cmake
+5. Build LAMMPS with cmake
 ```
 cd lammps*/
 mkdir build; cd build
