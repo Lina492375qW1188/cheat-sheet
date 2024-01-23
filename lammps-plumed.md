@@ -9,6 +9,17 @@ make yes-plumed
 make mpi
 ```
 
+# Mac os arm64 using make
+
+```
+cd lammps*/src/
+make lib-plumed args="-b" # also check make lib-plumed for more options.
+make yes-plumed
+make yes-extra-fix
+make yes-extra-dump
+make serial
+```
+
 # Mac os arm64, using cmake and traditional patching way (deprecated after plumed-2.4.8)
 I've tried this method on bridges2 but failed.
 1. First prepare a conda environment for LAMMPS and PLUMED
