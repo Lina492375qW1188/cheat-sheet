@@ -4,7 +4,7 @@ There are many ways to build lammps with plumed support. Refer to `lammps*/lib/p
 My test of building LAMMPS with PLUMED on bridges2 (`lammps*` means the LAMMPS folder):
 ```
 cd lammps*/src/
-make lib-plumed args="b" # also check make lib-plumed for more options.
+make lib-plumed args="-b" # also check make lib-plumed for more options.
 make yes-plumed
 make mpi
 ```
