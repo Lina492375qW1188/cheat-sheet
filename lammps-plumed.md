@@ -6,6 +6,7 @@ My test of building LAMMPS with PLUMED on bridges2 (`lammps*` means the LAMMPS f
 cd lammps*/src/
 make lib-plumed args="-b" # also check make lib-plumed for more options.
 make yes-plumed
+make yes-extra-fix
 make mpi
 ```
 
@@ -15,8 +16,8 @@ make mpi
 cd lammps*/src/
 make lib-plumed args="-b" # also check make lib-plumed for more options.
 make yes-plumed
-make yes-extra-fix # for dumping xtc, dcd ... file format.
-make yes-extra-dump
+make yes-extra-fix
+make yes-extra-dump # for dumping xtc, dcd ... file format.
 make serial
 ```
 
