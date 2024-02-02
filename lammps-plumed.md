@@ -44,7 +44,7 @@ make serial
 ```
 
 # Mac os arm64, using cmake and traditional patching way (deprecated after plumed-2.4.8)
-I've tried this method on bridges2 but failed.
+I've tried this method on bridges2 but failed, but it works on local pc.
 1. First prepare a conda environment for LAMMPS and PLUMED
 ```
 conda create -n lammps
