@@ -12,10 +12,10 @@ make install
 
 To remove PLUMED, remove
 ```
-/usr/local/bin/plumed*
-/usr/local/include/plumed
+[My_Path]/bin/plumed*
+[My_Path]/include/plumed
 
-/usr/local/lib/plumed
-/usr/local/lib/pkgconfig/plumed*
-/usr/local/lib/libplumed*
+[My_Path]/lib/plumed
+[My_Path]/lib/pkgconfig/plumed*
+[My_Path]/lib/libplumed*
 ```
