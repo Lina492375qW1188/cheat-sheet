@@ -14,6 +14,11 @@ Remove global rotational motion (alanine dipeptide):
 gmx_mpi trjconv -s aladip.tpr -f aladip.trr -o aladip_no_rot.trr -fit rot
 ```
 
+Convert `*.pdb` file to `*.xtc`:
+```
+gmx_mpi trjconv -f aladip.pdb -o aladip.xtc
+```
+
 Create `.tpr` for umbrella sampling
 ```
 module load gromacs/2020.2-cpu (example on bridges)
