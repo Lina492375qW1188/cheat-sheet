@@ -9,3 +9,13 @@ Build PLUMED on bridges2
 make -j 4
 make install
 ```
+
+To remove PLUMED, remove
+```
+/usr/local/bin/plumed*
+/usr/local/include/plumed
+
+/usr/local/lib/plumed
+/usr/local/lib/pkgconfig/plumed*
+/usr/local/lib/libplumed*
+```
