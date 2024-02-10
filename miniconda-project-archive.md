@@ -64,7 +64,9 @@ conda activate scraper
 conda install mamba -c conda-forge
 mamba install python numpy matplotlib jupyterlab notebook -c conda-forge
 mamba install anaconda::beautifulsoup4
- mamba install mechanicalsoup -c conda-forge
+mamba install mechanicalsoup -c conda-forge
+pip3 install mechanize
+pip3 install cookiejar
 
 conda deactivate
 ```
