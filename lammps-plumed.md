@@ -70,6 +70,7 @@ cd plumed*/
 ./configure --prefix=[My_Path] --enable-mpi CXX="$MPICXX" # if installed with MPI
 make -j 4
 make install
+source source.sh # To have PLUMED in PATH variable.
 ```
 
 4. Go to LAMMPS folder and patch with PLUMED.
