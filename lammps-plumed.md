@@ -32,8 +32,7 @@ make yes-extra-dump
 make mpi
 ```
 
-# Mac os arm64 using make
-
+# Mac os arm64
 ```
 cd lammps*/src/
 make lib-plumed args="-b" # also check make lib-plumed for more options.
