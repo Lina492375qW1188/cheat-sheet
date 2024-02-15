@@ -43,6 +43,26 @@ make yes-extra-dump # for dumping xtc, dcd ... file format.
 make serial
 ```
 
+Or build PLUMED first and link LAMMPS to PLUMED
+```
+cd plumed*/
+PATH_TO_PLUMED=/usr/local/ # Example
+./configure --prefix=${PATH_TO_PLUMED}
+./configure --prefix=${PATH_TO_PLUMED} \
+            --enable-mpi CXX="$MPICXX" \ # if installed with MPI
+            --enable-modules=+crystallization # if installed with crystallization module
+make -j 4
+make install
+source source.sh # To have PLUMED in PATH variable.
+
+cd lammps*/src/
+make lib-plumed args="-p ${PATH_TO_PLUMED} -m shared"
+make yes-plumed
+make yes-extra-fix
+make yes-extra-dump
+make mpi # or make serial if no MPI installed.
+```
+
 # Mac os arm64, using cmake and traditional patching way (deprecated after plumed-2.4.8)
 I've tried this method on bridges2 but failed, but it works on local pc.
 1. First prepare a conda environment for LAMMPS and PLUMED
