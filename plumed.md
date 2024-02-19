@@ -20,3 +20,8 @@ Post-analysis
 plumed driver --plumed plumed.dat --mf_pdb aladip.pdb
 plumed driver --plumed plumed.dat --mf_xtc md.xtc
 ```
+
+Add to PATH variable:
+
+1. Go to `~/.zshrc`
+2. Place `export PATH="[My_Path]/bin:$PATH"`
