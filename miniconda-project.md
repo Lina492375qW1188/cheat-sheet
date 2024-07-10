@@ -107,6 +107,27 @@ mamba install ipywidgets -c conda-forge
 conda deactivate
 ```
 
+Project-metad
+```
+conda create -n metad
+conda activate metad
+conda install mamba -c conda-forge
+mamba install python numpy matplotlib jupyterlab notebook -c conda-forge
+mamba install pybind11 eigen cmake qhull pytest -c conda-forge
+mamba install conda-forge::pyside6
+
+mamba install hoomd freud fresnel -c conda-forge
+mamba install signac signac-flow -c conda-forge
+mamba install gsd -c conda-forge
+mamba install coxeter -c conda-forge
+
+mamba install ipywidgets -c conda-forge
+mamba install anaconda::scikit-learn
+mamba install pytorch torchvision -c pytorch
+
+conda deactivate
+```
+
 Update on Feb 22, 2023:
 
 package scikit-learn-0.24.2-py39h9197a36_1 requires python >=3.9,<3.10.0a0
