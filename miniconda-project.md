@@ -112,7 +112,7 @@ Project-metad
 conda create -n metad
 conda activate metad
 conda install mamba -c conda-forge
-mamba install python numpy matplotlib jupyterlab notebook -c conda-forge
+mamba install python numpy matplotlib jupyterlab=4.0.7 notebook -c conda-forge
 mamba install pybind11 eigen cmake qhull pytest -c conda-forge
 mamba install conda-forge::pyside6
 
