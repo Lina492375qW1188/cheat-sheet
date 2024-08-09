@@ -124,6 +124,7 @@ mamba install coxeter -c conda-forge
 mamba install ipywidgets -c conda-forge
 mamba install anaconda::scikit-learn
 mamba install pytorch torchvision -c pytorch
+mamba install anaconda::pandas
 
 conda deactivate
 ```
