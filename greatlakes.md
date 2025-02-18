@@ -33,7 +33,6 @@ GPU job file example:
 
 #SBATCH --job-name=test_job
 #SBATCH --mail-user=suntingt@umich.edu
-#SBATCH --acount=sglotzer0
 #SBATCH --gres=gpu:1
 #SBATCH --ntasks-per-gpu=1
 #SBATCH --time=02:00:00
