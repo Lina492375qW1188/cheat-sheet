@@ -22,7 +22,7 @@ CPU job file example:
 #SBATCH --partition=standard
 
 module load singularity
-module load gcc/10.3.0 openmpi/4.1.4 singularity
+module load gcc/10.3.0 openmpi/4.1.6 singularity
 
 mpirun -n 1 singularity exec /scratch/sglotzer_root/sglotzer0/suntingt/software.sif python3 npt.py
 ```
@@ -39,7 +39,7 @@ GPU job file example:
 #SBATCH --partition=gpu
 
 module load singularity
-module load gcc/10.3.0 openmpi/4.1.4 singularity
+module load gcc/10.3.0 openmpi/4.1.6 singularity
 
 mpirun -n 1 singularity exec --nv /scratch/sglotzer_root/sglotzer0/suntingt/software.sif python3 npt.py
 ```
