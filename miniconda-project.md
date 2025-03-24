@@ -125,7 +125,6 @@ mamba install ipywidgets -c conda-forge
 mamba install anaconda::scikit-learn
 mamba install pytorch torchvision -c pytorch
 mamba install anaconda::pandas
-mamba install anaconda::perf
 
 conda deactivate
 ```
