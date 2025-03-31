@@ -23,7 +23,9 @@ CPU job file example:
 
 module load gcc/10.3.0 openmpi/4.1.6 singularity
 
-mpirun -n 1 singularity exec /scratch/sglotzer_root/sglotzer0/suntingt/software.sif python3 equilibriate.py
+software_dir=/scratch/sglotzer_root/sglotzer0/suntingt/
+
+mpirun -n 1 singularity exec ${software_dir}$/software.sif python3 equilibriate.py
 ```
 
 GPU job file example:
@@ -39,5 +41,7 @@ GPU job file example:
 
 module load gcc/10.3.0 openmpi/4.1.6 singularity
 
-mpirun -n 1 singularity exec --nv /scratch/sglotzer_root/sglotzer0/suntingt/software.sif python3 equilibriate.py
+software_dir=/scratch/sglotzer_root/sglotzer0/suntingt/
+
+mpirun -n 1 singularity exec --nv ${software_dir}$/software.sif python3 equilibriate.py
 ```
