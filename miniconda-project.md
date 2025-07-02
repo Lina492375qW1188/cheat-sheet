@@ -126,6 +126,7 @@ mamba install anaconda::scikit-learn
 mamba install pytorch torchvision -c pytorch
 mamba install anaconda::pandas
 mamba install -c conda-forge ffmpeg
+mamba install -c conda-forge pyscal3
 
 conda deactivate
 ```
