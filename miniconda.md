@@ -34,37 +34,7 @@ conda init zsh // or conda init
 Check whether it works using `conda list`
 
 
-Project-gnn
-```
-conda create -n gnn
-conda activate gnn
-conda install mamba -c conda-forge
-mamba install python=3.9 numpy matplotlib jupyterlab notebook -c conda-forge
-mamba install pybind11 eigen cmake qhull pytest -c conda-forge
-pip install PySide6
-
-mamba install hoomd freud fresnel -c conda-forge
-mamba install signac signac-flow -c conda-forge
-mamba install gsd -c conda-forge
-mamba install coxeter -c conda-forge
-
-mamba install scikit-learn -c intel
-mamba install pytorch torchvision -c pytorch
-mamba install ipywidgets -c conda-forge
-
-conda install -y clang_osx-arm64 clangxx_osx-arm64 gfortran_osx-arm64
-
-# Test on MACOSX-M1 version 12.6
-MACOSX_DEPLOYMENT_TARGET=12.6 CC=clang CXX=clang++ python -m pip --no-cache-dir  install  torch-scatter -f https://data.pyg.org/whl/torch-1.13.1+${cpu}.html
-
-MACOSX_DEPLOYMENT_TARGET=12.6 CC=clang CXX=clang++ python -m pip --no-cache-dir  install  torch-sparse -f https://data.pyg.org/whl/torch-1.13.1+${cpu}.html
-
-MACOSX_DEPLOYMENT_TARGET=12.6 CC=clang CXX=clang++ python -m pip --no-cache-dir  install  torch-geometric
-
-MACOSX_DEPLOYMENT_TARGET=12.6 CC=clang CXX=clang++ python -m pip --no-cache-dir install dgl -f https://data.dgl.ai/wheels/repo.html
-```
-
-Project-alchemy
+Example miniconda project installing HOOMD from source
 ```
 conda create -n alchemy
 conda activate alchemy
@@ -88,28 +58,6 @@ mamba install -c conda-forge yapf
 
 conda deactivate
 ```
-
-Project-nnff
-```
-conda create -n nnff
-conda activate nnff
-conda install mamba -c conda-forge
-mamba install python numpy matplotlib jupyterlab notebook -c conda-forge
-mamba install pybind11 eigen cmake qhull pytest -c conda-forge
-pip install PySide6
-
-mamba install hoomd freud fresnel -c conda-forge
-mamba install signac signac-flow -c conda-forge
-mamba install gsd -c conda-forge
-mamba install coxeter -c conda-forge
-
-mamba install scikit-learn -c intel
-mamba install pytorch torchvision -c pytorch
-mamba install ipywidgets -c conda-forge
-
-conda deactivate
-```
-
 
 
 Remove environment: 
