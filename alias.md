@@ -22,9 +22,9 @@ source ~/.bash_profile
 
 ```
 alias dropbox_home="cd Dropbox\ \(University\ of\ Michigan\)/Sun-Ting\ Tsai’s\ files/Home/"
-alias greatlakes="ssh suntingt@greatlakes.arc-ts.umich.edu"
-alias bridges="ssh sunting@bridges2.psc.edu"
-alias deepthought2="ssh sunting@login.deepthought2.umd.edu"
+alias greatlakes="ssh <user-account>@greatlakes.arc-ts.umich.edu"
+alias bridges="ssh <user-account>@bridges2.psc.edu"
+alias deepthought2="ssh <user-account>@login.deepthought2.umd.edu"
 ```
 
 Use `alias` to see all aliases.
