@@ -14,17 +14,15 @@ CPU job file example:
 #!/bin/bash
 
 #SBATCH --job-name=test
-#SBATCH --cpus-per-task=1
+#SBATCH --account=<available account>
+#SBATCH --mail-user=<email>
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=1
-#SBATCH --time=01:00:00
+#SBATCH --cpus-per-task=1
+#SBATCH --ntasks-per-node=8
 #SBATCH --partition=standard
+#SBATCH --time=00:20:00
 
-module load gcc/10.3.0 openmpi/4.1.6 singularity
-
-software_dir=<Directory to software.sif>
-
-mpirun -n 1 singularity exec ${software_dir}$/software.sif python3 equilibriate.py
+mpirun -n 8 python3 equilibriate.py
 ```
 
 GPU job file example:
