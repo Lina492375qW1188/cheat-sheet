@@ -1,7 +1,13 @@
+Orthographic view
+```
 camera ortho
+```
 
-Delete H bonds
+Delete H-bonds
 `hbonds delete`
+
+Remove everything except "C"
+`hide ~@C` `show @C`
 
 Show coordinate tripods
 `cofr showPivot true`
