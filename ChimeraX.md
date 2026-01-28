@@ -1,5 +1,8 @@
 camera ortho
 
+Delete H bonds
+`hbonds delete`
+
 Show coordinate tripods
 `cofr showPivot true`
 
