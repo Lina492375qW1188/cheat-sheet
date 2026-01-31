@@ -26,3 +26,9 @@ cofr fixed -5, -5, 0
 
 Customize length and radius of axes
 `cofr showPivot 5, .25`
+
+Sometimes, $\alpha$-helix not show correctly, e.g. PDB id: 4ALD, apply
+```
+dssp
+```
+to detect the missing secondary structures.
